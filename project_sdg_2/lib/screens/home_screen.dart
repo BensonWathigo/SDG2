@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_sdg_2/screens/Profile_screen.dart';
+import 'package:project_sdg_2/screens/welcome.dart';
 import 'tips_screen.dart';
-import 'calculator_screen.dart';
 import 'storage_guide_screen.dart';
 import 'education_screen.dart';
 
@@ -17,8 +17,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // List of screens for navigation
   final List<Widget> _screens = [
+    const Welcome(),
     TipsScreen(),
-    const CalculatorScreen(),
+    /*const CalculatorScreen(), */
     StorageGuideScreen(),
     const EducationScreen(),
     const ProfileScreen(),
@@ -65,15 +66,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           .blueGrey), // Faded white text for unselected items
                   destinations: const [
                     NavigationRailDestination(
+                      icon: Icon(Icons.person),
+                      selectedIcon: Icon(Icons.home),
+                      label: Text('Welcome'),
+                    ),
+                    NavigationRailDestination(
                       icon: Icon(Icons.lightbulb),
                       selectedIcon: Icon(Icons.lightbulb_outline),
                       label: Text('Daily Tips'),
                     ),
-                    NavigationRailDestination(
+                    /*NavigationRailDestination(
                       icon: Icon(Icons.calculate),
                       selectedIcon: Icon(Icons.calculate_outlined),
                       label: Text('Calculator'),
-                    ),
+                    ), */
                     NavigationRailDestination(
                       icon: Icon(Icons.storage),
                       selectedIcon: Icon(Icons.storage_outlined),
@@ -114,13 +120,17 @@ class _HomeScreenState extends State<HomeScreen> {
             return BottomNavigationBar(
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'welcome',
+                ),
+                BottomNavigationBarItem(
                   icon: Icon(Icons.lightbulb),
                   label: 'Daily Tips',
                 ),
-                BottomNavigationBarItem(
+                /*BottomNavigationBarItem(
                   icon: Icon(Icons.calculate),
                   label: 'Calculator',
-                ),
+                ), */
                 BottomNavigationBarItem(
                   icon: Icon(Icons.storage),
                   label: 'Storage Guide',

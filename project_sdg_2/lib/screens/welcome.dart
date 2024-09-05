@@ -33,20 +33,31 @@ class Welcome extends StatelessWidget {
                 'Our mission is help milllions of Africans starting with Kenya end the hunger problem. Our point of focus as forseeen on a cartesian plane is the North Rift Kenya and later other parts of Africa.',
                 style: TextStyle(fontSize: 18),
               ),
-              TextButton(onPressed: () {}, child: const Text('Donate')),
+              const SizedBox(height: 10),
+              Center(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Donate',
+                        style: TextStyle(
+                            backgroundColor: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green),
+                      ))),
               const SizedBox(height: 20),
               const Text(
                 "Blessed is the hand that gives for more shall be added unto him. Thanks for being your brother's keeper",
                 style: TextStyle(fontSize: 18),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 50),
               Transform.rotate(
-                angle: 45,
+                angle: -45,
                 child: const Text(
                   "Audios Muchachos",
-                  style: TextStyle(fontSize: 15, color: Colors.yellowAccent),
+                  style: TextStyle(fontSize: 15, color: Colors.green),
                 ),
               ),
+              const SizedBox(height: 10),
             ]),
           ),
         ));
